@@ -1,0 +1,69 @@
+<template>
+<lightning-card>
+    <div class="slds-align_absolute-center" style="font-size: 30px; font-weight:600">Add Product</div>
+    <hr>
+    <lightning-record-edit-form object-api-name={product} onsuccess={handleSuccess}>
+        <div class="slds-grid slds-wrap">
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-left_large">
+                    <lightning-input-field field-name="Name"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-right_large">
+                    <lightning-input-field field-name="Category__c"></lightning-input-field>
+                 </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-left_large">
+                    <lightning-input-field field-name="Brand__c" value={Brand.Id}></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-right_large">
+                    <lightning-input-field field-name="Supplier__c"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-left_large">
+                    <lightning-input-field field-name="Supplier_Price__c"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-right_large">
+                    <lightning-input-field field-name="Selling_Price__c"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-left_large">
+                    <lightning-input-field field-name="Selling_Percentage__c"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-right_large">
+                    <lightning-input-field field-name="Purchased_Date__c"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-left_large">
+                    <lightning-input-field field-name="Expiry_Date__c"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-right_large">
+                    <lightning-input-field field-name="Total_Qunatity__c"></lightning-input-field>
+                </div>
+            </div>
+            <div class="slds-p-horizontal--small slds-col slds-size_6-of-12 slds-m-bottom--medium">
+                <div class="slds-form-element slds-p-left_large">
+                    <lightning-input-field field-name="Sold_Quantity__c"></lightning-input-field>
+                </div>
+            </div>
+        </div>
+        <div class="slds-m-top_medium slds-align_absolute-center slds-button_stretch">
+            <lightning-button variant="brand" type="submit" name="save" label="Create Product">
+            </lightning-button>
+       </div>
+    </lightning-record-edit-form>
+</lightning-card>
+</template>
